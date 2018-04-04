@@ -12,15 +12,8 @@ A centralized repository for PHP-related brews.
 Run the following in your command-line:
 
 ```sh
-$ brew tap homebrew/homebrew-php
+$ brew tap munio/php
 ```
-
-## Bugs happen
-
-The more information you provide and the more detailed your report is, the easier it is for us to fix it.
-An example of the best practice(s) for filling out bug reports can be seen here: https://github.com/Homebrew/homebrew-php/issues/1225.
-
-Please refer to [this section](#filing-bug-reports) for more information.
 
 ## Common Issues
 
@@ -54,30 +47,6 @@ If you have recently upgraded your macOS version or Xcode, you may have some com
 - If `php56`, `php70` or `php71` build fails, remove all their dependencies and reinstall the formula. For instance: If `brew install php71` fails, do the following: `brew rm php71 && brew deps php71 | xargs brew rm`. If `brew install php71 --with-gmp` fails, do the following: `brew rm php71 && brew deps php71 --with-gmp | xargs brew rm`. Then reinstall a clean version of the formula: `brew update && brew upgrade && brew install php71`.
 - If an extension build fails, try also to remove all its dependencies and reinstall it.
 - Sometimes it appears that a formula is not available anymore, do the following: `brew tap --repair`.
-
-### Filing Bug Reports
-
-An example of the best practice(s) for filling out bug reports can be seen here: https://github.com/Homebrew/homebrew-php/issues/1225.
-
-Please include the following information in your bug report:
-
-- macOS Version: eg. 10.13.1, 10.12.3
-- Homebrew Version: `brew -v`
-- PHP Version in use: stock-apple, homebrew-php stable, homebrew-php devel, homebrew-php head, custom
-- Xcode Version: 9.1, 9.0, 8.1, 7 etc.
-  - Verify whether you have the `Command Line Tools` installed as well.
-- Output of `gcc -v`
-- Output of `php -v`
-- Installation logs for the formula in question
-  - A link to the gist created with `brew gist-logs <formula-you-are-using>` will contain these logs.
-  - Or, if `brew gist-logs` is not working:
-    - Output of `brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here` within a [gist](https://gist.github.com). Please append any options you added to the `brew install` command.
-    - Output of `brew doctor` within a [gist](https://gist.github.com)
-
-New bug reports will be created with a template of this information for you to fill in.
-
-
-This will help us diagnose your issues much quicker, as well as find similarities between different reported issues.
 
 ## Background
 
@@ -164,11 +133,6 @@ Some caveats:
 ## Contributing
 
 See [Contributing](CONTRIBUTING.md)
-
-## Todo
-
-- [x] Proper PHP Versioning? See issue [#8](https://github.com/homebrew/homebrew-php/issues/8)
-- [x] Pull out all PHP-related brews from Homebrew
 
 ## License
 
